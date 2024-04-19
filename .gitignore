@@ -1,0 +1,6 @@
+# Ignore PNG and WebP files
+*.png
+*.webp
+
+# Ignore venv directory
+venv/
