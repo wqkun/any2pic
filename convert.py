@@ -1,3 +1,4 @@
+import os
 from PIL import Image
 import sys
 
@@ -29,10 +30,36 @@ def image_to_png(input_path, output_path) -> None:
     except Exception as e:
         print(f"Error converting {input_path} to PNG: {e}")
 
+def batch_convert(input_dir, output_dir):
+    """
+    Batch convert images within a directory to PNG format.
+
+    :param input_dir: Directory containing input images.
+    :type input_dir: str
+
+    :param output_dir: Directory where the PNG images will be saved.
+    :type output_dir: str
+
+    :return: None
+    :rtype: None
+    """
+    # Create the output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Loop through all files in the input directory
+    for filename in os.listdir(input_dir):
+        input_path = os.path.join(input_dir, filename)
+        if os.path.isfile(input_path):
+            # Generate output file path by replacing the extension with .png
+            output_filename = os.path.splitext(filename)[0] + ".png"
+            output_path = os.path.join(output_dir, output_filename)
+            # Convert the image to PNG
+            image_to_png(input_path, output_path)
+
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python convert.py input_file.[webp|jpg|...] output_file.png")
+        print("Usage: python convert.py input_directory output_directory")
     else:
-        input_file = sys.argv[1]
-        output_file = sys.argv[2]
-        image_to_png(input_file, output_file)
+        input_dir = sys.argv[1]
+        output_dir = sys.argv[2]
+        batch_convert(input_dir, output_dir)
