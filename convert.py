@@ -30,7 +30,7 @@ def image_to_png(input_path, output_path) -> None:
     except Exception as e:
         print(f"Error converting {input_path} to PNG: {e}")
 
-def batch_convert(input_dir, output_dir):
+def batch_convert(input_dir, output_dir) -> None:
     """
     Batch convert images within a directory to PNG format.
 
