@@ -4,7 +4,7 @@ Any2Pic is a Python utility for converting images from any format to PNG.
 
 ## Features
 
-- Convert images from WebP format to PNG.
+- Convert images from any format to PNG.
 
 ## Usage
 
@@ -18,7 +18,7 @@ Any2Pic is a Python utility for converting images from any format to PNG.
 3. Navigate to the project directory:
 
     ```
-    cd Any2Pic
+    cd any2pic
     ```
 
 4. Activate the virtual environment (optional but recommended):
@@ -34,10 +34,10 @@ Any2Pic is a Python utility for converting images from any format to PNG.
 5. Run the script:
 
     ```
-    python convert.py input_file.webp output_file.png
+    python convert.py input_directory output_directory
     ```
 
-   Replace `input_file.webp` with the path to your WebP image and `output_file.png` with the desired path for the PNG output.
+   Replace `input_directory` with the path to your input directory and `output_directory` with the desired path for the output directory.
 
 ## Requirements
 
