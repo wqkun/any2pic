@@ -1,6 +1,6 @@
-# Any2Pic
+# any2pic
 
-Any2Pic is a Python utility for converting images from any format to PNG.
+any2pic is a Python utility for converting images from any format to PNG.
 
 ## Features
 
@@ -12,7 +12,7 @@ Any2Pic is a Python utility for converting images from any format to PNG.
 2. Clone the repository:
 
     ```
-    git clone https://github.com/your-username/Any2Pic.git
+    git clone https://github.com/your-username/any2pic.git
     ```
 
 3. Navigate to the project directory:
