@@ -1,7 +1,7 @@
 # app.py
 
 import sys
-from image_converter import batch_convert
+from image_utils.image_converter import batch_convert
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
