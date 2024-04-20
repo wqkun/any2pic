@@ -1,6 +1,7 @@
+# image_converter.py
+
 import os
 from PIL import Image
-import sys
 
 def image_to_png(input_path, output_path) -> None:
     """
@@ -55,11 +56,3 @@ def batch_convert(input_dir, output_dir) -> None:
             output_path = os.path.join(output_dir, output_filename)
             # Convert the image to PNG
             image_to_png(input_path, output_path)
-
-if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python convert.py input_directory output_directory")
-    else:
-        input_dir = sys.argv[1]
-        output_dir = sys.argv[2]
-        batch_convert(input_dir, output_dir)
