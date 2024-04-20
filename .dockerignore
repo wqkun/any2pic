@@ -1,0 +1,8 @@
+# Ignore Markdown files
+*.md
+
+# Ignore the .git directory
+.git
+
+# Ignore the venv directory
+venv/
