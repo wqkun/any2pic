@@ -1,6 +1,14 @@
-# Ignore PNG and WebP files
+# Ignore image files
 *.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
 *.webp
 
 # Ignore venv directory
 venv/
+
+# Ignore Python bytecode cache
+__pycache__/
